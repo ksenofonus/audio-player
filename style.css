@@ -71,11 +71,17 @@ body {
 .ctrl_button {
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 .ctrl_button img{
   filter:invert(1);
   width: 30px;
   height: auto;
+}
+.ctrl_button img:hover,
+.play:hover {
+  opacity: 0.6;
+  transition: 0.5s;
 }
 .timeline {
   position: relative;
@@ -83,12 +89,13 @@ body {
   height: 5px;
   background-color: black;
   margin: 20px auto;
+  cursor: pointer;
 }
 .progressbar {
   position: absolute;
-  top: -1px;
+  top: -3px;
   width: 6px;
-  height: 8px;
+  height: 10px;
   background-color: greenyellow;
   border-radius: 4px;
 }
@@ -105,4 +112,12 @@ body {
   color: rgb(85, 236, 68);
   bottom: 32px;
   right: 18%;
+}
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 5%;
+  display: flex;
+  justify-content: center;
+  gap: 20%;
 }
