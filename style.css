@@ -43,12 +43,14 @@ body {
   width: 100%;
   height: auto;
   display:flex;
+  flex-direction: column;
 }
 .buttons {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  margin-top: 10px;
 }
 .play {
   width: 50px;
@@ -58,6 +60,7 @@ body {
 }
 .singer {
   font-size: 22px;
+  font-weight: bold;
   color: greenyellow;
 }
 .song {
@@ -73,4 +76,33 @@ body {
   filter:invert(1);
   width: 30px;
   height: auto;
+}
+.timeline {
+  position: relative;
+  width: 65%;
+  height: 5px;
+  background-color: black;
+  margin: 20px auto;
+}
+.progressbar {
+  position: absolute;
+  top: -1px;
+  width: 6px;
+  height: 8px;
+  background-color: greenyellow;
+  border-radius: 4px;
+}
+.curent {
+  position: absolute;
+  font-size: 16px;
+  color: white;
+  bottom: 5px;
+  left: 18%;
+}
+.audio-length {
+  position: absolute;
+  font-size: 16px;
+  color: rgb(85, 236, 68);
+  bottom: 32px;
+  right: 18%;
 }
