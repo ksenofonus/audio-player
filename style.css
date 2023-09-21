@@ -2,8 +2,7 @@
   margin: 0;
   padding: 0;
 }
-body {
-}
+
 .background {
   position: absolute;
   top: 0;
@@ -59,8 +58,6 @@ body {
   background: url("./assets/icons/play.png") no-repeat center center;
   background-size: cover;
   filter: invert(1);
-}
-.play { 
 }
 .pause {
   background: url("./assets/icons/pause.png") no-repeat center center;
