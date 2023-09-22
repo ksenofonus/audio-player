@@ -1,9 +1,9 @@
 let isPlay = false;
 let playNum = 0;
-let playList = ['./assets/audio/beyonce (1).mp3', './assets/audio/dontstartnow.mp3', './assets/audio/Cheek_to_Cheek.mp3', './assets/audio/Go_Down_Moses.mp3', './assets/audio/What_A_Wonderful_World.mp3'];
-let coverList = ['./assets/images/lemonade.png', './assets/images/dontstartnow.png', './assets/images/cheek-to-cheek.png', './assets/images/go_down.png', './assets/images/wonderfull_world.png'];
-let singerList = ['Beyonce', 'Dua Lipa', 'Louis Armstrong', 'Louis Armstrong', 'Louis Armstrong'];
-let titleList =['Don\'t hurt yourself', 'Don\'t stop now', 'Cheek to Cheek', 'Go Down Moses', 'What A Wonderful World'];
+let playList = ['./assets/audio/Cheek_to_Cheek.mp3', './assets/audio/Go_Down_Moses.mp3', './assets/audio/What_A_Wonderful_World.mp3','./assets/audio/beyonce (1).mp3', './assets/audio/dontstartnow.mp3'];
+let coverList = ['./assets/images/cheek-to-cheek.png', './assets/images/go_down.png', './assets/images/wonderfull_world.png', './assets/images/lemonade.png', './assets/images/dontstartnow.png'];
+let singerList = ['Louis Armstrong', 'Louis Armstrong', 'Louis Armstrong', 'Beyonce', 'Dua Lipa'];
+let titleList =['Cheek to Cheek', 'Go Down Moses', 'What A Wonderful World', 'Don\'t hurt yourself', 'Don\'t stop now'];
 
 const audio = document.querySelector('audio');
 const playButton = document.querySelector('.play-button');
