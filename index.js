@@ -39,8 +39,8 @@ prevButton.addEventListener('click', function prev() {
   audio.setAttribute('src', playList[playNum]);
   background.setAttribute('src', coverList[playNum]);
   cover.setAttribute('src', coverList[playNum]);
-  singer.innerHTML = singerList[playNum];
-  song.innerHTML = titleList[playNum];
+  singer.textContent = singerList[playNum];
+  song.textContent = titleList[playNum];
     // audio.currentTime = 0;
     audio.play();
     // isPlay = !isPlay;
@@ -58,8 +58,8 @@ nextButton.addEventListener('click', function next() {
   audio.setAttribute('src', playList[playNum]);
   background.setAttribute('src', coverList[playNum]);
   cover.setAttribute('src', coverList[playNum]);
-  singer.innerHTML =singerList[playNum];
-  song.innerHTML= titleList[playNum];
+  singer.textContent = singerList[playNum];
+  song.textContent = titleList[playNum];
     // audio.currentTime = 0;
     audio.play();
     // isPlay = isPlay;
