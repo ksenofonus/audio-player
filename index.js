@@ -16,6 +16,7 @@ const song = document.querySelector('.song');
 const songLength = document.querySelector('.audio-length');
 const progressBar = document.querySelector('.progressbar');
 const currentTime = document.querySelector('.curent');
+const timeline = document.querySelector('.timeline');
 
 
 //play
@@ -92,3 +93,10 @@ setInterval(() => {
   progressBar.style.left = (audio.currentTime / audio.duration * 100 + "%");
   currentTime.textContent = formatSecondsToTime(audio.currentTime);
 }, 1000);
+
+//timeline change
+timeline.addEventListener("click", (e) => {
+  const timelineWidth = window.getComputedStyle(timeline).width;
+  const timeChange = e.offsetX / parseInt(timelineWidth) * audio.duration;
+  audio.currentTime = timeChange;
+}, false);
