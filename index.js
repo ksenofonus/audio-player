@@ -31,28 +31,30 @@ playButton.addEventListener('click', function playPause() {
   }
   isPlay = !isPlay;
 });
+//
 
 //prev
-prevButton.addEventListener('click', function prev() {
-  playNum = playNum - 1;
-  if (playNum < 0) {
-    playNum = playList.length - 1; //
-  } else if (playNum > (playList.length - 1)) {
-    playNum = 0;
-  }
-  audio.setAttribute('src', playList[playNum]);
-  background.setAttribute('src', coverList[playNum]);
-  cover.setAttribute('src', coverList[playNum]);
-  singer.textContent = singerList[playNum];
-  song.textContent = titleList[playNum];
-    // audio.currentTime = 0;
+  function prev() {
+    playNum = playNum - 1;
+    if (playNum < 0) {
+      playNum = playList.length - 1; //
+    } else if (playNum > (playList.length - 1)) {
+      playNum = 0;
+    }
+    audio.setAttribute('src', playList[playNum]);
+    background.setAttribute('src', coverList[playNum]);
+    cover.setAttribute('src', coverList[playNum]);
+    singer.textContent = singerList[playNum];
+    song.textContent = titleList[playNum];
+}
+prevButton.addEventListener('click', () => {
+    prev();
     audio.play();
-    // isPlay = !isPlay;
     playButton.classList.add('pause');
   });
 
 //next
-nextButton.addEventListener('click', function next() {
+function next() {
   playNum = playNum + 1;
   if (playNum < 0) {
     playNum = playList.length - 1;
@@ -64,9 +66,10 @@ nextButton.addEventListener('click', function next() {
   cover.setAttribute('src', coverList[playNum]);
   singer.textContent = singerList[playNum];
   song.textContent = titleList[playNum];
-    // audio.currentTime = 0;
+}
+nextButton.addEventListener('click', () => {
+    next();
     audio.play();
-    // isPlay = isPlay;
     playButton.classList.add('pause');
 });
 
