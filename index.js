@@ -28,12 +28,12 @@ prevButton.addEventListener('click', function prev() {
     playNum = 0;
   }
   audio.setAttribute('src', playList[playNum]);
-  if (!isPlay) {
+  // if (!isPlay) {
     // audio.currentTime = 0;
     audio.play();
+    isPlay = !isPlay;
     playButton.classList.add('pause');
-  }
-  isPlay = !isPlay;
+  // }
 });
 
 //next
@@ -45,10 +45,10 @@ nextButton.addEventListener('click', function next() {
     playNum = 0;
   }
   audio.setAttribute('src', playList[playNum]);
-  if (!isPlay) {
+  // if (!isPlay) {
     // audio.currentTime = 0;
     audio.play();
+    isPlay = !isPlay;
     playButton.classList.add('pause');
-  }
-  isPlay = !isPlay;
+  // }
 });
