@@ -13,6 +13,7 @@ const background = document.querySelector('.background');
 const cover = document.querySelector('.audio__cover img');
 const singer = document.querySelector('.singer');
 const song = document.querySelector('.song');
+const songLength = document.querySelector('.audio-length');
 
 
 //play
@@ -65,3 +66,25 @@ nextButton.addEventListener('click', function next() {
     // isPlay = isPlay;
     playButton.classList.add('pause');
 });
+
+//timecode
+function formatSecondsToTime(sec) {
+  let minutes = Math.floor(sec/60);
+  let seconds = Math.floor(sec - (minutes * 60));
+
+  if (minutes < 10){
+    minutes = "0" + minutes;
+  }
+  if (seconds < 10){
+    seconds  = "0" + seconds;
+  }
+
+  return minutes + ':' + seconds;
+}
+audio.addEventListener(
+  "loadeddata",
+  () => {
+    songLength.textContent = formatSecondsToTime(audio.duration);
+  },
+  false
+);
