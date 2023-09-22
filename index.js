@@ -14,6 +14,8 @@ const cover = document.querySelector('.audio__cover img');
 const singer = document.querySelector('.singer');
 const song = document.querySelector('.song');
 const songLength = document.querySelector('.audio-length');
+const progressBar = document.querySelector('.progressbar');
+const currentTime = document.querySelector('.curent');
 
 
 //play
@@ -81,10 +83,12 @@ function formatSecondsToTime(sec) {
 
   return minutes + ':' + seconds;
 }
-audio.addEventListener(
-  "loadeddata",
-  () => {
+audio.addEventListener("loadeddata", () => {
     songLength.textContent = formatSecondsToTime(audio.duration);
   },
   false
 );
+setInterval(() => {
+  progressBar.style.left = (audio.currentTime / audio.duration * 100 + "%");
+  currentTime.textContent = formatSecondsToTime(audio.currentTime);
+}, 1000);
