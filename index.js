@@ -17,7 +17,7 @@ const song = document.querySelector('.song');
 
 //play
 playButton.addEventListener('click', function playPause() {
-  if (!isPlay) {
+  if (audio.paused) {
     // audio.currentTime = 0;
     audio.play();
     playButton.classList.add('pause');
@@ -43,7 +43,7 @@ prevButton.addEventListener('click', function prev() {
   song.innerHTML = titleList[playNum];
     // audio.currentTime = 0;
     audio.play();
-    isPlay = !isPlay;
+    // isPlay = !isPlay;
     playButton.classList.add('pause');
   });
 
@@ -62,6 +62,6 @@ nextButton.addEventListener('click', function next() {
   song.innerHTML= titleList[playNum];
     // audio.currentTime = 0;
     audio.play();
-    isPlay = isPlay;
+    // isPlay = isPlay;
     playButton.classList.add('pause');
 });
