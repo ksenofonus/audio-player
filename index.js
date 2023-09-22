@@ -3,7 +3,7 @@ let playNum = 0;
 let playList = ['./assets/audio/Cheek_to_Cheek.mp3', './assets/audio/Go_Down_Moses.mp3', './assets/audio/What_A_Wonderful_World.mp3','./assets/audio/beyonce (1).mp3', './assets/audio/dontstartnow.mp3'];
 let coverList = ['./assets/images/cheek-to-cheek.png', './assets/images/go_down.png', './assets/images/wonderfull_world.png', './assets/images/lemonade.png', './assets/images/dontstartnow.png'];
 let singerList = ['Louis Armstrong', 'Louis Armstrong', 'Louis Armstrong', 'Beyonce', 'Dua Lipa'];
-let titleList =['Cheek to Cheek', 'Go Down Moses', 'What A Wonderful World', 'Don\'t hurt yourself', 'Don\'t stop now'];
+let titleList =['Cheek to Cheek', 'Go Down Moses', 'A Wonderful World', 'Don\'t hurt yourself', 'Don\'t stop now'];
 
 const audio = document.querySelector('audio');
 const playButton = document.querySelector('.play-button');
@@ -34,6 +34,13 @@ playButton.addEventListener('click', function playPause() {
 //
 
 //prev
+function changeContent() {
+  audio.setAttribute('src', playList[playNum]);
+  background.setAttribute('src', coverList[playNum]);
+  cover.setAttribute('src', coverList[playNum]);
+  singer.textContent = singerList[playNum];
+  song.textContent = titleList[playNum];
+}
   function prev() {
     playNum = playNum - 1;
     if (playNum < 0) {
@@ -41,11 +48,7 @@ playButton.addEventListener('click', function playPause() {
     } else if (playNum > (playList.length - 1)) {
       playNum = 0;
     }
-    audio.setAttribute('src', playList[playNum]);
-    background.setAttribute('src', coverList[playNum]);
-    cover.setAttribute('src', coverList[playNum]);
-    singer.textContent = singerList[playNum];
-    song.textContent = titleList[playNum];
+    changeContent();
 }
 prevButton.addEventListener('click', () => {
     prev();
@@ -61,11 +64,7 @@ function next() {
   } else if (playNum > (playList.length - 1)) {
     playNum = 0;
   }
-  audio.setAttribute('src', playList[playNum]);
-  background.setAttribute('src', coverList[playNum]);
-  cover.setAttribute('src', coverList[playNum]);
-  singer.textContent = singerList[playNum];
-  song.textContent = titleList[playNum];
+  changeContent();
 }
 nextButton.addEventListener('click', () => {
     next();
