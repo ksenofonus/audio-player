@@ -68,6 +68,9 @@
   background-size: cover;
   filter: invert(1);
 }
+.info {
+  width: 45%;
+}
 .singer {
   font-size: 22px;
   font-weight: bold;
