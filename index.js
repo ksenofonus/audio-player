@@ -72,6 +72,12 @@ nextButton.addEventListener('click', () => {
     playButton.classList.add('pause');
 });
 
+//ended track
+
+audio.addEventListener ('ended', () => {
+  next();
+  audio.play()});
+
 //timecode
 function formatSecondsToTime(sec) {
   let minutes = Math.floor(sec/60);
